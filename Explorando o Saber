@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorando o Saber</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #87cefa;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+        nav {
+            margin: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .section {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .section h2 {
+            margin-top: 0;
+        }
+        .question {
+            margin-bottom: 15px;
+        }
+        .question label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .question input, .question select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        footer {
+            background-color: #87cefa;
+            padding: 10px;
+            text-align: center;
+            color: #fff;
+        }
+        .btn {
+            background-color: #87cefa;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background-color: #00bfff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Explorando o Saber</h1>
+        <nav>
+            <a href="#forum">Fórum</a>
+            <a href="#disciplinas">Disciplinas</a>
+            <a href="#recursos">Recursos</a>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <section id="forum" class="section">
+            <h2>Fórum de Discussão</h2>
+            <p>Participe de discussões sobre todas as disciplinas e ajude outros a alcançar a nota 10!</p>
+        </section>
+        
+        <section id="disciplinas" class="section">
+            <h2>Disciplinas</h2>
+            <ul>
+                <li>Geografia</li>
+                <li>Português</li>
+                <li>Inglês</li>
+                <li>Matemática</li>
+                <li>História</li>
+                <li>Ciências</li>
+            </ul>
+        </section>
+        
+        <section id="recursos" class="section">
+            <h2>Recursos Interativos</h2>
+            <p>Explore testes, tutoriais e vídeos explicativos para um aprendizado mais eficaz!</p>
+            
+            <div class="question">
+                <label for="disciplina">Qual disciplina você gostaria de explorar mais?</label>
+                <select id="disciplina">
+                    <option value="geografia">Geografia</option>
+                    <option value="portugues">Português</option>
+                    <option value="ingles">Inglês</option>
+                    <option value="matematica">Matemática</option>
+                    <option value="historia">História</option>
+                    <option value="ciencias">Ciências</option>
+                </select>
+            </div>
+            
+            <div class="question">
+                <label for="avaliacao">Como você avalia a utilidade do fórum?</label>
+                <select id="avaliacao">
+                    <option value="muito-util">Muito útil</option>
+                    <option value="util">Útil</option>
+                    <option value="neutro">Neutro</option>
+                    <option value="pouco-util">Pouco útil</option>
+                    <option value="nada-util">Nada útil</option>
+                </select>
+            </div>
+            
+            <div class="question">
+                <label for="recursos">Que tipo de conteúdo interativo você gostaria de ver mais?</label>
+                <select id="recursos">
+                    <option value="testes">Testes</option>
+                    <option value="tutoriais">Tutoriais</option>
+                    <option value="videos">Vídeos explicativos</option>
+                    <option value="outro">Outro (especifique)</option>
+                </select>
+            </div>
+            
+            <button class="btn" onclick="submitForm()">Enviar Respostas</button>
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Explorando o Saber. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function submitForm() {
+            const disciplina = document.getElementById('disciplina').value;
+            const avaliacao = document.getElementById('avaliacao').value;
+            const recursos = document.getElementById('recursos').value;
+
+            alert(`Disciplina: ${disciplina}\nAvaliação do Fórum: ${avaliacao}\nConteúdo Interativo: ${recursos}`);
+        }
+    </script>
+</body>
+</html>
